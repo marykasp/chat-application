@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
-  --bg-color: #F8F6F8;
+  --bg-color: #F7f7f7;
   --mesage-bg-color: #F7F5F7;
-  --black: #353334;
+  --dark-color: #353334;
+  --black: #333;
   --white: #fff;
   --online-color: #468267;
   --offline-color: ;
   --font-color: #CACACA;
   --gray-color: #565556;
+  --error-color: #721c24;
+  --error-bg: #f8d7da;
+  --box-shadow: 0 0 12px 0 rgba(0,0,0,0.1), 
+  0 32px 64px -48px rgba(0,0,0,0.5);
 }
 
 * {
@@ -17,4 +22,115 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.container {
+  background-color: var(--white);
+  width: 450px;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Signup Form */
+.form {
+  padding: 25px 30px;
+}
+
+.form header {
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.form form {
+  margin: 20px 0;
+}
+
+.form form .error-txt {
+  color: var(--error-color);
+  background-color: var(--error-bg);
+  padding: 8px 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid var(--error-bg);
+}
+
+/* Name Details div - first and last name */
+.form form .name-details {
+  display: flex;
+}
+
+form .name-details .field:first-child {
+  margin-right: 10px;
+}
+
+form .name-details .field:last-child {
+  margin-left: 10px;
+}
+
+.form form .field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form form .field label {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  outline: none;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.form form .image input {
+  font-size: 17px;
+}
+
+.form form .button {
+  margin-top: 13px;
+  height: 40px;
+  border: none;
+  font-weight: 500;
+  font-size: 17px;
+  background: var(--dark-color);
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form form .button:hover {
+  background-color: rgb(65, 64, 64);
+}
+
+.form .link {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.form .link a {
+  color: var(--dark-color);
+}
+
+.form .link a:hover {
+  text-decoration: underline;
 }
